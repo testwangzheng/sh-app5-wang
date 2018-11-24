@@ -1,0 +1,31 @@
+login_data:
+  test_login_001:
+    phone: "15358492352"
+    passwd: "15937625840"
+    expect: "我的收藏"
+  test_login_002:
+    phone: " 15358492352"
+    passwd: "15937625840"
+    expect: "我的收藏"
+  test_login_003:
+    phone: "15358492352 "
+    passwd: "15937625840"
+    expect: "我的收藏"
+
+
+  test_login_004:
+    phone: "15358492352"
+    passwd: "888888"
+    get_toast: "登录"
+    expect_data: "登录密码错误"
+#  test_login_005:   # 输入空格，不能使 登录按钮 变为可点击状态
+#    phone: " "
+#    passwd: "15937625840"
+#    get_toast: "登录"
+#    expect_data: "登录名不能为空"
+  test_login_006:
+    phone: "13466668888"
+    passwd: "15937625840"
+    get_toast: "登录"
+    expect_data: "此用户不存在"
+

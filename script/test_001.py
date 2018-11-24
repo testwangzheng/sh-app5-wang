@@ -31,8 +31,8 @@ class Test_01:
     def teardown_class(self):
         self.page_obj.driver.quit()
 
-    @pytest.mark.parametrize("phone, passwd, toast, sou, expect", get_login_data().get("suc"))
-    def test_001(self, phone, passwd ,toast, sou, expect):
+    @pytest.mark.parametrize("i, phone, passwd, toast, expect", get_login_data().get("suc"))
+    def test_001(self, i, phone, passwd ,toast, expect):
         """测试 登录  成功"""
         # 首页，点击 -->我
         self.page_obj.get_home_page().click_my_btn()
